@@ -1,5 +1,6 @@
 import { createTheme } from "@vanilla-extract/css";
 import { contract } from "@/assets/theme/contract.css";
+import { HubotSans } from "../abstract/fonts.css";
 
 export const dark = createTheme(contract, {
   color: {
@@ -8,7 +9,7 @@ export const dark = createTheme(contract, {
     text: "white",
   },
   font: {
-    body: "helvetica",
+    body: HubotSans,
   },
   transition: {
     all: "all 0.2s ease-in-out",

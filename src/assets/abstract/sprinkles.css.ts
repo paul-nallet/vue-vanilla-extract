@@ -31,6 +31,7 @@ const responsiveStyles = defineProperties({
     marginLeft: space,
     marginRight: space,
     fontSize: space,
+    fontWeight: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     borderRadius: space,
     gap: space,
     textAlign: ["left", "center", "right"],

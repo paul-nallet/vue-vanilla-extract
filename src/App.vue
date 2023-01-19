@@ -3,11 +3,12 @@ import { dark } from "@/assets/theme/dark.css";
 import { light } from "@/assets/theme/light.css";
 import { div } from "@/assets/components/div.css";
 import { button } from "@/assets/components/button.css";
-
 import { ref } from "vue";
 import { sprinkles } from "./assets/abstract/sprinkles.css";
+import { style } from "@vanilla-extract/css";
 
 const theme = ref(light);
+const rangeValue = ref(100);
 
 if (
   window.matchMedia &&
@@ -44,7 +45,7 @@ const click = () => {
       <div
         :class="
           sprinkles({
-            transition:'all',
+            transition: 'all',
             flexGrow: 1,
             color: {
               default: 'brand',
@@ -62,5 +63,29 @@ const click = () => {
       <div>3</div>
     </div>
     <button @click="click" :class="button">Changer de couleur</button>
+    <br />
+    <h1
+      :class="
+        sprinkles({
+          fontWeight: rangeValue,
+          fontSize: '20'
+        })
+      "
+    >
+      {{ rangeValue }}
+    </h1>
+    <input
+      :class="
+        sprinkles({
+          background: 'text',
+          borderRadius: '4'
+        })
+      "
+      type="range"
+      min="100"
+      max="900"
+      step="100"
+      v-model="rangeValue"
+    />
   </div>
 </template>
