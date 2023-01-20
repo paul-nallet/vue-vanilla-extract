@@ -86,7 +86,7 @@ const click = () => {
       type="range"
       min="100"
       max="900"
-      step="50"
+      step="100"
       v-model="rangeValue"
     />
   </div>
