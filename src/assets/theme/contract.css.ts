@@ -11,5 +11,6 @@ export const contract = createThemeContract({
   },
   transition: {
     all: "",
+    smooth:"",
   },
 });

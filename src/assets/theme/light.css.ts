@@ -12,6 +12,7 @@ export const light = createTheme(contract, {
     body: HubotSans,
   },
   transition: {
-    all: "all 0.2s ease-in-out",
+    all: "all 0.5s ease-in-out 200ms ease-in-out",
+    smooth: "all 0.5s ease-in-out 200ms ease-in-out",
   },
 });

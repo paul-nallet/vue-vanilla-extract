@@ -5,7 +5,6 @@ import { div } from "@/assets/components/div.css";
 import { button } from "@/assets/components/button.css";
 import { ref } from "vue";
 import { sprinkles } from "./assets/abstract/sprinkles.css";
-import { style } from "@vanilla-extract/css";
 
 const theme = ref(light);
 const rangeValue = ref(100);
@@ -68,23 +67,26 @@ const click = () => {
       :class="
         sprinkles({
           fontWeight: rangeValue,
-          fontSize: '20'
+          fontSize: '20',
+          transition: 'all',
         })
       "
     >
-      {{ rangeValue }}
+      <span v-for="letter in rangeValue.toString()" :key="letter">
+        {{ letter }}
+      </span>
     </h1>
     <input
       :class="
         sprinkles({
           background: 'text',
-          borderRadius: '4'
+          borderRadius: '4',
         })
       "
       type="range"
       min="100"
       max="900"
-      step="100"
+      step="50"
       v-model="rangeValue"
     />
   </div>

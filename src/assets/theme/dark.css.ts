@@ -13,5 +13,6 @@ export const dark = createTheme(contract, {
   },
   transition: {
     all: "all 0.2s ease-in-out",
+    smooth: "all 0.3s  ease-in-out ",
   },
 });

@@ -30,8 +30,15 @@ const responsiveStyles = defineProperties({
     marginBottom: space,
     marginLeft: space,
     marginRight: space,
-    fontSize: space,
-    fontWeight: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    gridColumn: ["auto", "span 1 / span 1"],
+    gridTemplateColumns: [
+      "repeat(1, 1fr)",
+      "repeat(2, 1fr)",
+      "repeat(3, auto)",
+      "repeat(4, 1fr)",
+      "repeat(5, 1fr)",
+      "repeat(6, 1fr)",
+    ],
     borderRadius: space,
     gap: space,
     textAlign: ["left", "center", "right"],
@@ -64,6 +71,8 @@ const colorProperties = defineProperties({
     borderWidth: space,
     borderColor: contract.color,
     borderStyle: ["solid", "none"],
+    fontSize: space,
+    fontWeight: [100, 150,  200, 250 ,  300, 400, 500, 600, 700, 800, 900],
   },
 });
 
